@@ -29,7 +29,7 @@
 <body>
 
 <h1>Chappo — Privacy Policy</h1>
-<p class="sub">Last updated: 2 August 2026</p>
+<p class="sub">Last updated: 28 August 2026</p>
 
 <p>
   Chappo is a mobile game published by <strong>wecook2d</strong>. This policy explains what data the
@@ -39,10 +39,18 @@
 <h2>In short</h2>
 <p>
   Chappo does not ask you to create an account, and does not collect your name, email address or
-  location. Your game progress is saved on your own device. Two third-party services do receive
-  data: an advertising service, which uses your device's advertising identifier to show ads, and
-  Google Play Games (or Apple Game Center), which stores your scores and achievements if you choose
-  to sign in.
+  location. Your game progress is saved on your own device. Three Google services receive data:
+  <strong>AdMob</strong>, which shows the ad you may choose to watch to continue a run;
+  <strong>Firebase</strong>, which reports crashes and counts how the game is played; and
+  <strong>Google Play Games</strong> (or <strong>Apple Game Center</strong> on iOS), which holds
+  your scores, achievements and cloud saves.
+</p>
+<p>
+  If you are in the European Economic Area, the United Kingdom or Switzerland, the game asks for
+  your consent the first time it starts. <strong>Until you accept, none of the data in the table
+  below is collected</strong> — the advertising SDK is not even started, and analytics and crash
+  reporting stay switched off. You can change your answer at any time from
+  <strong>Options → Privacy options</strong> inside the game.
 </p>
 
 <h2>Data collected</h2>
@@ -50,37 +58,67 @@
 <table>
   <tr><th>Data</th><th>Collected by</th><th>Purpose</th><th>Can you refuse?</th></tr>
   <tr>
-    <td>Advertising identifier and device identifiers</td>
-    <td>Unity Ads (Unity Technologies), a third party</td>
-    <td>Displaying ads, measuring their performance, and detecting advertising fraud</td>
-    <td>Not from inside the game. You can reset or delete your advertising ID in your device
-        settings.</td>
+    <td>Advertising identifier, device identifiers and technical device information; approximate
+        location derived from the IP address</td>
+    <td>Google AdMob</td>
+    <td>Showing the rewarded ad, measuring it, and detecting advertising fraud</td>
+    <td>Yes in the EEA, the UK and Switzerland, through the consent screen. Everywhere else you can
+        reset or delete your advertising ID in your device settings.</td>
+  </tr>
+  <tr>
+    <td>An app instance identifier, device model, operating system, country, and in-game events —
+        runs started and ended, distance, score, level reached, bosses, bonus stages</td>
+    <td>Google Firebase Analytics</td>
+    <td>Understanding how the game is actually played, so it can be balanced and improved</td>
+    <td>Yes, through the same consent screen. We only ever see totals and averages, never a single
+        player's play session.</td>
+  </tr>
+  <tr>
+    <td>Crash reports: the error and its stack trace, the state of the device at that moment, an
+        installation identifier, and the last diagnostic lines the game itself produced</td>
+    <td>Google Firebase Crashlytics</td>
+    <td>Finding and fixing crashes and errors</td>
+    <td>Yes, through the same consent screen.</td>
   </tr>
   <tr>
     <td>Player account identifier, scores, achievements, saved games</td>
     <td>Google Play Games Services (Android) or Apple Game Center (iOS)</td>
     <td>Leaderboards, achievements and cloud saves</td>
-    <td>Yes. Sign-in is optional and the game is fully playable signed out; you can sign out at any
-        time from the main screen.</td>
+    <td>The game is fully playable without them. Sign-in is handled by the platform itself: on
+        Android you can turn automatic sign-in off for Chappo in the Google Play Games app
+        settings.</td>
   </tr>
 </table>
 </div>
 <p>
-  The advertising identifier is <strong>shared with a third party</strong>. The data handled by
-  Google Play Games or Apple Game Center is processed by those platforms on our behalf so the game
-  can offer leaderboards, achievements and cloud saves.
+  The advertising identifier is <strong>shared with a third party</strong>, Google, acting as an
+  advertising provider. The analytics, crash and Play Games data is processed by Google on our
+  behalf so the game can run, be fixed and be improved.
 </p>
 
 <h2>Data not collected</h2>
 <p>
   Chappo does not collect your name, email address, postal address, phone number, contacts, photos,
-  audio, files, calendar, browsing history, or your location. The game requests no permission for
-  any of these. It contains no in-app purchases and no analytics or crash-reporting service.
+  audio, files, calendar, browsing history, or your precise location. The game requests no
+  permission for any of these. It contains no in-app purchases.
 </p>
 <p>
   Your local progress file (<code>playerGameData</code>) stays on your device and is never sent to
-  us. We operate no server of our own and hold no database of players.
+  us; if you are signed in to Play Games, a copy is stored in your own Google account so it can
+  follow you to another device. We operate no server of our own and hold no database of players.
 </p>
+
+<h2>Your choices</h2>
+<ul>
+  <li><strong>Consent</strong> — in the EEA, the UK and Switzerland the game shows Google's consent
+      message on first launch. Refusing it means no ad is ever requested, and no analytics or crash
+      data is sent. The game itself remains fully playable, and the offer to watch an ad to continue
+      a run simply never appears.</li>
+  <li><strong>Changing your mind</strong> — <strong>Options → Privacy options</strong> reopens that
+      same screen, whichever way you answered.</li>
+  <li><strong>Advertising ID</strong> — it can be reset or deleted from your device's privacy
+      settings, on any device, anywhere.</li>
+</ul>
 
 <h2>Third-party services</h2>
 <p>
@@ -88,8 +126,12 @@
   receive:
 </p>
 <ul>
-  <li>Unity Ads — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity game player and app user privacy policy</a></li>
-  <li>Google Play Games Services — <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+  <li>Google AdMob, Firebase and Play Games Services —
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
+      <a href="https://policies.google.com/technologies/partner-sites">How Google uses information
+      from sites or apps that use our services</a></li>
+  <li>Firebase specifically —
+      <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a></li>
   <li>Apple Game Center (iOS) — <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
 </ul>
 
@@ -102,9 +144,9 @@
 <h2>Your rights</h2>
 <p>
   wecook2d is based in France, so if you are in the European Economic Area the GDPR gives you the
-  right to access your data, to have it corrected or erased, to object to its processing, and to
-  lodge a complaint with a supervisory authority — in France, the
-  <a href="https://www.cnil.fr/">CNIL</a>.
+  right to access your data, to have it corrected or erased, to object to its processing, to
+  withdraw a consent you have given, and to lodge a complaint with a supervisory authority — in
+  France, the <a href="https://www.cnil.fr/">CNIL</a>.
 </p>
 
 <h2>Deleting your data</h2>
@@ -117,6 +159,10 @@
   <li><strong>Scores, achievements and cloud saves</strong> — delete them from your Google Play Games
       account settings, or your Apple Game Center settings on iOS.</li>
   <li><strong>Advertising identifier</strong> — reset or delete it in your device's privacy settings.</li>
+  <li><strong>Analytics and crash data</strong> — withdrawing your consent from
+      <strong>Options → Privacy options</strong> stops any further collection; what was already sent
+      is held by Google under its own retention rules, and uninstalling the game breaks the link
+      with your device.</li>
 </ul>
 <p>
   You can also write to <a href="mailto:chappo.runner@gmail.com">chappo.runner@gmail.com</a> to request
@@ -126,7 +172,7 @@
 <h2>Changes to this policy</h2>
 <p>
   If the game starts collecting data differently — for instance if we add a new advertising provider
-  or a crash-reporting service — this page will be updated and the date at the top changed.
+  or in-app purchases — this page will be updated and the date at the top changed.
 </p>
 
 <h2>Contact</h2>
