@@ -47,10 +47,12 @@
 </p>
 <p>
   If you are in the European Economic Area, the United Kingdom or Switzerland, the game asks for
-  your consent the first time it starts. <strong>Until you accept, none of the data in the table
-  below is collected</strong> — the advertising SDK is not even started, and analytics and crash
-  reporting stay switched off. You can change your answer at any time from
-  <strong>Options → Privacy options</strong> inside the game.
+  your consent the first time it starts. <strong>Nothing in the table below is collected before you
+  answer</strong> — the advertising SDK is not even started, and analytics and crash reporting stay
+  switched off. <strong>If you refuse</strong>, no usage or crash data is ever sent, and the ad you
+  may choose to watch is served <strong>without personalisation</strong>: Google does not use your
+  data to build a profile of you. The game is fully playable either way. You can change your answer
+  at any time from <strong>Options → Privacy options</strong> inside the game.
 </p>
 
 <h2>Data collected</h2>
@@ -62,23 +64,24 @@
         location derived from the IP address</td>
     <td>Google AdMob</td>
     <td>Showing the rewarded ad, measuring it, and detecting advertising fraud</td>
-    <td>Yes in the EEA, the UK and Switzerland, through the consent screen. Everywhere else you can
-        reset or delete your advertising ID in your device settings.</td>
+    <td>Yes in the EEA, the UK and Switzerland, through the consent screen: refusing means the ad
+        is served without personalisation. Everywhere else you can reset or delete your advertising
+        ID in your device settings.</td>
   </tr>
   <tr>
     <td>An app instance identifier, device model, operating system, country, and in-game events —
         runs started and ended, distance, score, level reached, bosses, bonus stages</td>
     <td>Google Firebase Analytics</td>
     <td>Understanding how the game is actually played, so it can be balanced and improved</td>
-    <td>Yes, through the same consent screen. We only ever see totals and averages, never a single
-        player's play session.</td>
+    <td>Yes, through the same consent screen — refusing stops it entirely. We only ever see totals
+        and averages, never a single player's play session.</td>
   </tr>
   <tr>
     <td>Crash reports: the error and its stack trace, the state of the device at that moment, an
         installation identifier, and the last diagnostic lines the game itself produced</td>
     <td>Google Firebase Crashlytics</td>
     <td>Finding and fixing crashes and errors</td>
-    <td>Yes, through the same consent screen.</td>
+    <td>Yes, through the same consent screen — refusing stops it entirely.</td>
   </tr>
   <tr>
     <td>Player account identifier, scores, achievements, saved games</td>
@@ -111,9 +114,9 @@
 <h2>Your choices</h2>
 <ul>
   <li><strong>Consent</strong> — in the EEA, the UK and Switzerland the game shows Google's consent
-      message on first launch. Refusing it means no ad is ever requested, and no analytics or crash
-      data is sent. The game itself remains fully playable, and the offer to watch an ad to continue
-      a run simply never appears.</li>
+      message on first launch. Refusing it means no usage and no crash data is ever sent, and the
+      rewarded ad is served without personalisation. The game itself remains fully playable, and the
+      offer to watch an ad to continue a run is unchanged.</li>
   <li><strong>Changing your mind</strong> — <strong>Options → Privacy options</strong> reopens that
       same screen, whichever way you answered.</li>
   <li><strong>Advertising ID</strong> — it can be reset or deleted from your device's privacy
