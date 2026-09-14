@@ -9,7 +9,8 @@
 <meta property="og:description" content="An independent studio making fun, colourful 2D games. Meet Chappo.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://wecook2d.github.io/assets/chappo-keyart.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='11' cy='16' r='9' fill='%23e8412f'/%3E%3Ccircle cx='21' cy='16' r='9' fill='%232aa8e0'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
@@ -42,7 +43,24 @@
   .brand img{height:40px; width:auto}
   nav a{color:var(--muted); font-weight:600; margin-left:1.4rem; font-size:.98rem}
   nav a:hover{color:var(--ink); text-decoration:none}
-  @media(max-width:560px){ nav a{margin-left:1rem; font-size:.9rem} .brand{font-size:1.15rem} }
+  .burger{display:none; flex-direction:column; justify-content:center; gap:5px;
+    width:44px; height:44px; padding:0 10px; background:none; border:0; cursor:pointer; border-radius:10px}
+  .burger span{display:block; height:2.5px; background:var(--ink); border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease}
+  .burger:focus-visible{outline:2px solid var(--blue); outline-offset:2px}
+  @media(max-width:640px){
+    .burger{display:flex}
+    nav{position:absolute; top:64px; left:0; right:0; display:none;
+      flex-direction:column; align-items:stretch; gap:0; padding:.4rem 0;
+      background:var(--bg); border-bottom:1px solid var(--line); box-shadow:var(--shadow)}
+    nav.open{display:flex}
+    nav a{margin:0; padding:.85rem 1.5rem; font-size:1rem}
+    nav a:hover{background:rgba(0,0,0,.045); text-decoration:none}
+    .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0}
+    .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  }
+  @media(prefers-reduced-motion:reduce){ .burger span{transition:none} }
 
   /* hero */
   .hero{position:relative; overflow:hidden;
@@ -121,7 +139,10 @@
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="wecook2d home"><img src="assets/wecook2d-logo.png" alt="wecook2d"></a>
-    <nav>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav">
       <a href="#about">Studio</a>
       <a href="#chappo">Chappo</a>
       <a href="#contact">Contact</a>
@@ -210,6 +231,26 @@
     <p class="copy">© 2026 wecook2d. An independent game studio. All game art and characters © wecook2d.</p>
   </div>
 </footer>
+
+<script>
+  (function(){
+    var btn = document.querySelector('.burger');
+    var nav = document.getElementById('site-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
