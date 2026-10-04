@@ -29,7 +29,7 @@
 <body>
 
 <h1>Chappo — Privacy Policy</h1>
-<p class="sub">Last updated: 28 August 2026</p>
+<p class="sub">Last updated: 4 October 2026</p>
 
 <p>
   Chappo is a mobile game published by <strong>wecook2d</strong>. This policy explains what data the
@@ -38,12 +38,14 @@
 
 <h2>In short</h2>
 <p>
-  Chappo does not ask you to create an account, and does not collect your name, email address or
-  location. Your game progress is saved on your own device. Three Google services receive data:
+  Chappo does not ask you to create an account, and does not collect your real name, email address
+  or location. Your game progress is saved on your own device. Three Google services receive data:
   <strong>AdMob</strong>, which shows the ad you may choose to watch to continue a run;
   <strong>Firebase</strong>, which reports crashes and counts how the game is played; and
   <strong>Google Play Games</strong> (or <strong>Apple Game Center</strong> on iOS), which holds
-  your scores, achievements and cloud saves.
+  your achievements and cloud saves. One Unity service, <strong>Unity Gaming Services</strong>, runs
+  the in-game leaderboards: it gives you an anonymous player identifier and keeps your best scores
+  with the nickname shown next to them, which every player of Chappo can see.
 </p>
 <p>
   If you are in the European Economic Area, the United Kingdom or Switzerland, the game asks for
@@ -51,7 +53,9 @@
   answer</strong> — the advertising SDK is not even started, and analytics and crash reporting stay
   switched off. <strong>If you refuse</strong>, no usage or crash data is ever sent, and the ad you
   may choose to watch is served <strong>without personalisation</strong>: Google does not use your
-  data to build a profile of you. The game is fully playable either way. You can change your answer
+  data to build a profile of you. The in-game leaderboards keep working whatever you answer: they
+  are a part of the game you use, not a measurement of how you play. The game is fully playable
+  either way. You can change your answer
   at any time from <strong>Options → Privacy options</strong> inside the game.
 </p>
 
@@ -91,24 +95,40 @@
         Android you can turn automatic sign-in off for Chappo in the Google Play Games app
         settings.</td>
   </tr>
+  <tr>
+    <td>An anonymous player identifier created by the game; the nickname you choose in Options, or
+        one generated for you; your best scores and distances, and the character you were playing;
+        on Android, if you are signed in to Google Play Games, your Play Games player identifier
+        (never your Google name, email address or picture), so that the game finds the same player
+        again after a reinstall or on a new phone</td>
+    <td>Unity Gaming Services (Authentication and Leaderboards)</td>
+    <td>The in-game leaderboards, and the markers that show other players' best distances during a
+        run. Your nickname, scores and character are visible to every player.</td>
+    <td>Not through the consent screen: the leaderboards are part of the game. The nickname is yours
+        to choose and change. Daily and weekly leaderboards are cleared every day and every week;
+        the all-time ones are kept until you ask us to erase them (see <em>Deleting your data</em>).</td>
+  </tr>
 </table>
 </div>
 <p>
   The advertising identifier is <strong>shared with a third party</strong>, Google, acting as an
-  advertising provider. The analytics, crash and Play Games data is processed by Google on our
-  behalf so the game can run, be fixed and be improved.
+  advertising provider. The analytics, crash and Play Games data is processed by Google, and the
+  leaderboard data by Unity, on our behalf so the game can run, be fixed and be improved.
 </p>
 
 <h2>Data not collected</h2>
 <p>
-  Chappo does not collect your name, email address, postal address, phone number, contacts, photos,
-  audio, files, calendar, browsing history, or your precise location. The game requests no
+  Chappo does not collect your real name, email address, postal address, phone number, contacts,
+  photos, audio, files, calendar, browsing history, or your precise location. The only name involved
+  is the leaderboard nickname, which you choose and which does not need to be your real name. The game requests no
   permission for any of these. It contains no in-app purchases.
 </p>
 <p>
   Your local progress file (<code>playerGameData</code>) stays on your device and is never sent to
   us; if you are signed in to Play Games, a copy is stored in your own Google account so it can
-  follow you to another device. We operate no server of our own and hold no database of players.
+  follow you to another device. We operate no server of our own. The leaderboards are the only
+  player data we can look at: through Unity's dashboard we see each player's anonymous identifier,
+  nickname and scores, and nothing else about them.
 </p>
 
 <h2>Your choices</h2>
@@ -136,6 +156,7 @@
   <li>Firebase specifically —
       <a href="https://firebase.google.com/support/privacy">Privacy and security in Firebase</a></li>
   <li>Apple Game Center (iOS) — <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></li>
+  <li>Unity Gaming Services: <a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a></li>
 </ul>
 
 <h2>Children</h2>
@@ -154,13 +175,15 @@
 
 <h2>Deleting your data</h2>
 <p>
-  Since Chappo keeps no data of its own on any server, deletion is handled where the data actually
-  lives:
+  Chappo runs no server of its own, so deletion is handled where the data actually lives:
 </p>
 <ul>
   <li><strong>Local progress</strong> — uninstalling the game removes it from your device.</li>
-  <li><strong>Scores, achievements and cloud saves</strong> — delete them from your Google Play Games
-      account settings, or your Apple Game Center settings on iOS.</li>
+  <li><strong>Leaderboard nickname and scores</strong>: the game cannot erase them by itself. Write to
+      us with the nickname shown on the leaderboard, and we will erase your scores and your Unity
+      player account. If you keep playing afterwards, you start again as a new player.</li>
+  <li><strong>Play Games achievements and cloud saves</strong> — delete them from your Google Play
+      Games account settings, or your Apple Game Center settings on iOS.</li>
   <li><strong>Advertising identifier</strong> — reset or delete it in your device's privacy settings.</li>
   <li><strong>Analytics and crash data</strong> — withdrawing your consent from
       <strong>Options → Privacy options</strong> stops any further collection; what was already sent
